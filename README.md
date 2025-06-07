@@ -19,10 +19,26 @@
 ## 快速运行
 1. 克隆本项目到本地：
    ```bash
-   git clone https://github.com/你的用户名/你的仓库名.git
+   git clone https://github.com/rockets-cn/treesnake.git
    ```
-2. 进入项目目录，使用 VSCode Live Server 或任意静态服务器打开 `public/index.html`
-   - 也可直接用浏览器打开 `public/index.html`（推荐用本地服务器方式）
+2. 进入项目目录，推荐用本地静态服务器运行：
+   - **推荐**：用 VSCode 的 Live Server 插件，右键 public/index.html 选择"Open with Live Server"
+   - 或用 Python3 自带服务器：
+     ```bash
+     cd public
+     python -m http.server 8080
+     # 然后浏览器访问 http://localhost:8080
+     ```
+   - 或用 Node.js 的 serve 工具：
+     ```bash
+     npm install -g serve
+     serve public
+     ```
+   - **不推荐**：直接双击 index.html，部分浏览器会因安全策略导致 Three.js 资源加载异常。
+
+## 常见问题
+- 如果页面白屏或控制台报错，优先检查是否用本地服务器方式打开。
+- 推荐使用最新版 Chrome/Edge/Firefox 浏览器。
 
 ## 依赖
 - [Three.js](https://threejs.org/)（通过CDN自动加载，无需本地安装）
